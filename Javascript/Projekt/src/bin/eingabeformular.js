@@ -3,15 +3,13 @@
 const eingabeformular = {
 
     formulardaten_holen(e) {
-
-
-  return {
-    titel: e.target.elements.titel.value,
-    betrag: e.target.elements.betrag.value,
-    einnahme: e.target.elements.einnahme.checked,
-    datum: e.target.elements.datum.valueAsDate
-  }
-},
+      return {
+        titel: e.target.elements.titel.value,
+        betrag: e.target.elements.betrag.value,
+        einnahme: e.target.elements.einnahme.checked,
+        datum: e.target.elements.datum.valueAsDate
+      }
+    },
 
     formulardaten_verarbeiten(formulardaten) {
       return {

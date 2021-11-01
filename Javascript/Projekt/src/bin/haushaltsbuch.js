@@ -18,7 +18,7 @@ const haushaltsbuch = {
         this.gesamtbilanz_erstellen();
         this.gesamtbilanz_anzeigen();
     },
-
+ 
     eintrag_entfernen(timestamp) {
 
       let start_index;
