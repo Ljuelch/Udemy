@@ -48,6 +48,7 @@ class Eintrag {
           month: "2-digit",
           day: "2-digit"
       });
+      
       listenpunkt.insertAdjacentElement("afterbegin", datum);
 
       let titel = document.createElement("span");

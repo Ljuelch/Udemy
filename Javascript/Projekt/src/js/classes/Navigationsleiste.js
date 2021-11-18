@@ -21,7 +21,6 @@ class Navigationsleiste {
     navigationsleiste.insertAdjacentElement("afterbegin", anker);
 
     return navigationsleiste;
-
   }
 
   anzeigen() {
