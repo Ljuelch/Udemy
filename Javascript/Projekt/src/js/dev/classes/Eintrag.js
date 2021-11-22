@@ -1,6 +1,6 @@
-"use strict";
+import liqui_planner from "./../liqui-planner.js";
 
-class Eintrag {
+export default class Eintrag {
 
   constructor(titel, betrag, typ, datum) {
     this._titel = titel;
@@ -48,7 +48,7 @@ class Eintrag {
           month: "2-digit",
           day: "2-digit"
       });
-      
+
       listenpunkt.insertAdjacentElement("afterbegin", datum);
 
       let titel = document.createElement("span");
@@ -78,7 +78,7 @@ class Eintrag {
   _eintrag_entfernen_event_hinzufuegen(listenpunkt) {
       listenpunkt.querySelector(".entfernen-button").addEventListener("click", e => {
           let timestamp = e.target.parentElement.getAttribute("data-timestamp");
-          haushaltsbuch.eintrag_entfernen(timestamp);
+          liqui_planner.eintrag_entfernen(timestamp);
       });
   }
 

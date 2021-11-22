@@ -1,6 +1,4 @@
- "use strict";
-
-class Gesamtbilanz {
+export default class Gesamtbilanz {
 
     constructor() {
         this._einnahmen = 0;
@@ -75,11 +73,15 @@ class Gesamtbilanz {
         return gesamtbilanz;
     }
 
+    _entfernen() {
+      let gesamtbilanz = document.querySelector("#gesamtbilanz");
+      if (gesamtbilanz !== null) {
+          gesamtbilanz.remove();
+      }
+    }
+
     anzeigen() {
-        let gesamtbilanz = document.querySelector("#gesamtbilanz");
-        if (gesamtbilanz !== null) {
-            gesamtbilanz.remove();
-        }
+        this._entfernen();
         document.querySelector("body").insertAdjacentElement("beforeend", this._html);
     }
 
